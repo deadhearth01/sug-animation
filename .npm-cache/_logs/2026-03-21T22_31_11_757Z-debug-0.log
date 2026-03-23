@@ -1,0 +1,18 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Volumes/SSD_1TB/vscode/SUG/SUG-animation/.npmrc
+5 silly config load:file:/Users/jagadeeshpotupureddy/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run build
+8 verbose argv "run" "build"
+9 verbose logfile logs-max:10 dir:/Volumes/SSD_1TB/vscode/SUG/SUG-animation/.npm-cache/_logs/2026-03-21T22_31_11_757Z-
+10 verbose logfile /Volumes/SSD_1TB/vscode/SUG/SUG-animation/.npm-cache/_logs/2026-03-21T22_31_11_757Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /Volumes/SSD_1TB/vscode/SUG/SUG-animation
+13 verbose os Darwin 25.4.0
+14 verbose node v22.18.0
+15 verbose npm  v10.9.3
+16 verbose exit 0
+17 info ok

@@ -1,0 +1,91 @@
+.sug-logo-animation {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base structural bits */
+.sug-logo-animation__white-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 0;
+}
+
+.sug-logo-animation__bg-wash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160vmax;
+  height: 160vmax;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  z-index: 1;
+}
+
+.sug-logo-animation__bg-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #0878c0 0deg,
+    #23b3b0 75deg,
+    #9be562 165deg,
+    #0878c0 285deg,
+    #0878c0 360deg
+  );
+  filter: blur(40px);
+}
+
+.sug-logo-animation__noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* SVG Container */
+.sug-logo-animation__frame {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sug-logo-animation__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.1));
+}
+
+.sug-logo-animation__arrow,
+.sug-logo-animation__s {
+  transform-box: fill-box;
+}
+
+/* Smooth out final state */
+.sug-logo-animation[data-settled="true"] .sug-logo-animation__bg-wash,
+.sug-logo-animation[data-settled="true"] .sug-logo-animation__noise {
+  display: none;
+}
